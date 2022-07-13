@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{css/style.css}" />
+
+    <title>Listagem de Tarefas</title>
+  </head>
+  <body>
+    <header>
+      <span>Lista de Tarefas</span>
+    </header>
+    <main>
+      <table class="table">
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">Nome da Tarefa</th>
+          <th scope="col">Data da Execução</th>
+          <th scope="col">#</th>
+        </thead>
+        <tbody>
+          <tr data-th-each="task: ${tasks}">
+            <td data-th-text="${task.id}"></td>
+            <td data-th-text="${task.name}"></td>
+            <!-- Mais duas chaves para ser mapeado o formato de data e  hora 
+    definido em "Task.java(MODEL)" -->
+            <td data-th-text="${{task.date}}"></td>
+            <td>
+              <a th:href="@{'/edit/' + ${task.id}}">Editar</a>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </main>
+    <footer></footer>
+  </body>
+</html>
