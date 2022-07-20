@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <title>Gerenciamento de Usuários</title>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h2>Gerenciamento de Usuários</h2>
+
+    </header>
+
+    <main>
+        <table class="table_main">
+            <thead class="thead-dark">
+
+            <tr class="alerta" th:if="${mensagem}">
+                <td colspan="8">[[${mensagem}]]</td>
+            </tr>
+
+            <tr>
+                <th colspan="8" class="novo" scope="col"><a
+                        th:href="@{'/pages/novo'}">Adiciona Novo Usuário</a></th>
+            </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Ativo</th>
+                <!--colspan="2", OCUPAR DUAS COLUNAS -->
+                <th colspan="2" scope="col">Gerencia</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block data-th-each="usuarios : ${listUsers}">
+                <tr >
+                    <td data-th-text="${{usuarios.id}}" class="id"></td>
+
+                    <td data-th-text="${{usuarios.nome}}" class="nome"></td>
+
+                    <td data-th-text="${{usuarios.sobrenome}}" class="sobrenome"></td>
+
+                    <td data-th-text="${{usuarios.telefone}}" class="telefone"></td>
+
+                    <td data-th-text="${{usuarios.email}}" class="email"></td>
+
+                    <!--Fonte:https://pt.stackoverflow.com/questions/262505/convertendo-boolean-para-sim-ou-n%C3%83o-em-angularjs-->
+                    <td data-color data-th-text="${{true == usuarios.ativo ? 'Sim' : 'Não'}}"></td>
+
+                    <td class="edita"><a th:href="@{'/edita/' + ${usuarios.id}}">Editar</a></td>
+                    <td class="deleta"><a th:href="@{'/deleta/' + ${usuarios.id}}" id="deleta">Deletar</a></td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </main>
+</div>
+
+</body>
+<script src="/scripts/mascaras.js"></script>
+</html>

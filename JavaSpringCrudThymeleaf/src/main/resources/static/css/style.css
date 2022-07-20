@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+html, body {
+    background-color: #D2691E38;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    align-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+    position: absolute;
+    width: 100vw;
+    align-content: center;
+}
+
+table {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
+th {
+    background-color: burlywood;
+    color: #765858;
+}
+
+th, td {
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.edita > a {
+
+    background-color: darkslategrey;
+
+}
+
+.deleta > a {
+    background-color: darkred;
+}
+
+.edita > a:hover {
+    color: darkslategrey;
+    background-color: white;
+    border: 1px solid darkslategrey;
+}
+
+.deleta > a:hover {
+    color: darkred;
+    background-color: white;
+    border: 1px solid darkred;
+}
+
+.novo > a {
+    background-color: darkblue;
+}
+
+.novo > a:hover {
+    color: darkblue;
+    background-color: white;
+    border: 1px solid darkblue;
+}
+
+a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+tr.alerta > td{
+    border-radius: 5px 5px 0 0;
+    background-color: #8FBC8F83;
+    color: green;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+[data-color="Sim"] {
+    background-color: red;
+}

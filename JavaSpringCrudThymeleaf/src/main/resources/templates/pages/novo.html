@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="stylesheet" href="/css/novo.css"/>
+
+    <title>[[${paginaTitulo}]]</title>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h2>[[${paginaTitulo}]]</h2>
+    </header>
+
+    <main>
+        <form th:action="@{/salva}" method="post" th:object="${usuario}">
+
+            <input type="hidden" name="id" id="id" th:value="${usuario.id}" value="">
+
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" th:value="${usuario.nome}" required minlength="4">
+
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="sobrenome"  th:value="${usuario.sobrenome}" required minlength="4">
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"th:value="${usuario.telefone}" required  placeholder="(00) 00000-0000">
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" th:value="${usuario.email}" required minlength="13" placeholder="example@example.com">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" th:value="${usuario.password}" required minlength="8">
+
+            <section class="ativo">
+                <label for="ativo">Ativo</label>
+                <input type="checkbox" checked="checked"  name="ativo" id="ativo" th:checked="${usuario.ativo}" >
+            </section>
+
+            <section class="botao">
+                <label for="salvar"></label>
+                <input type="submit" name="salvar" id="salvar" value="Salvar">
+
+                <label for="cancelar"></label>
+                <input type="button" onclick="cancelaForm()" name="cancelar" id="cancelar" value="Cancelar">
+            </section>
+        </form>
+    </main>
+</div>
+
+</body>
+<script src="/scripts/mascaras.js"></script>
+</html>

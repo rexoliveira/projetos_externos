@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+html, body {
+    background-color: #D2691E38;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    align-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+    position: absolute;
+    width: 100vw;
+    align-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    border-radius: 10px;
+    background-color: bisque;
+    padding: 20px;
+}
+
+form > label, .ativo {
+    color: #765858;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: left;
+}
+
+input {
+    padding: 5px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.ativo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.botao > #cancelar {
+    margin: 5px 0px 5px 10px;
+    width: 40%;
+    height: 30px;
+    background-color: darkred;
+    color: white;
+    border: 1px solid darkred;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botao > #cancelar:hover {
+    background-color: white;
+    color: darkred;
+    border: 1px solid white;
+}
+
+.botao > #salvar {
+
+    margin: 5px 10px 5px 0px;
+    width: 40%;
+    height: 30px;
+    background-color: darkblue;
+    color: white;
+    border: 1px solid darkblue;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botao > #salvar:hover {
+    background-color: white;
+    color: darkblue;
+    border: 1px solid white;
+}
+
+
+
+
+
+
