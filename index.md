@@ -1,5 +1,5 @@
 <h1># projetos_externos</h1>
- <h2>Porjetos externos para estudos, baseados em outros desenvolvedores</h2>
+ <h2>Projetos externos para estudos, baseados em outros desenvolvedores</h2>
 
 <a href="https://github.com/rexoliveira/projetos_externos/tree/master/BackgroundTextClipWithCss" target="_blank">BackgroundTextClipWithCss</a>
 
