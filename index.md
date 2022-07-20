@@ -1,7 +1,7 @@
 <h1># projetos_externos</h1>
  <h2>Porjetos externos para estudos, baseados em outros desenvolvedores</h2>
 
-<a href="https://rexoliveira.github.io/projetos_externos/BackgroundTextClipWithCss/" target="_blank">BackgroundTextClipWithCss</a>
+<a href="https://github.com/rexoliveira/projetos_externos/tree/master/BackgroundTextClipWithCss" target="_blank">BackgroundTextClipWithCss</a>
 
 <a href="https://rexoliveira.github.io/projetos_externos/CSS Glowing Check Box Button Design/" target="_blank">CSS Glowing Check Box Button Design</a>
 
